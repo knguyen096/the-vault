@@ -1,52 +1,24 @@
-/* HeroesComponent's private CSS styles */
-.avatars {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
-  }
-  .avatars li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
-  }
-  .avatars li:hover {
-    color: #2c3a41;
-    background-color: #e6e6e6;
-    left: .1em;
-  }
-  .avatars li.selected {
-    background-color: black;
-    color: white;
-  }
-  .avatars li.selected:hover {
-    background-color: #505050;
-    color: white;
-  }
-  .avatars li.selected:active {
-    background-color: black;
-    color: white;
-  }
-  .avatars .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color:#405061;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-  }
-  
-  input {
-    padding: .5rem;
-  }
+.mat-accordion {
+  background-color: #efefef;
+  display: block;
+
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-600px); /* rotate and position it; translateX value corresponds to panel height */
+  width: 600px; /* this will be the height of the accordion (inversed due to rotation) */
+}
+
+.mat-expansion-panel {
+  max-height: 500px; /* this will be the width of the panel (inversed due to rotation) */
+  padding: 30px;
+  margin-bottom: 1px;
+  border-style: ridge;
+  border-color: darkgrey;
+}
+
+.panel-content {
+  transform-origin: top left;
+  transform: rotate(90deg); /* rotate back */
+  margin-left: 100%; /* position it */
+  height: 600px; /* real height of the content */
+  width: 400px; /* real width of the content */
+}
