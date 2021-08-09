@@ -1,0 +1,15 @@
+<h2>My Avatars</h2>
+<ul class="avatars">
+
+    <!--create for loop for every avatar in the mock data and disaply their id and name-->
+    <li *ngFor="let avatar of avatars" (click)="onSelect(avatar)" [class.selected]="avatar == selectedAvatar">
+
+        <span class="badge">{{avatar.id}} </span>{{avatar.name}}
+    </li>
+</ul>
+
+<!--calls another component called avatardetails to lighten this components load! it also prmotes reusable code
+and less errors-->
+
+<app-avatar-detail [avatar]="selectedAvatar"></app-avatar-detail>
+
