@@ -1,7 +1,7 @@
 <div *ngIf="avatar">
 
     <h2>{{avatar.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{avatar.id}}</div>
+    <div><span>description: </span>{{avatar.description}}</div>
     <div>
       <label for="avatar-name">Avatar name: </label>
       <input id="avatar-name" [(ngModel)]="avatar.name" placeholder="name">
